@@ -1,2 +1,2 @@
 # BedtimeCoding
-I'll be uploading here the projects I work on before bedtime 😎 😶‍🌫️ 😴
+I'll be uploading the projects I work on before bedtime 😎 😶‍🌫️ 😴
