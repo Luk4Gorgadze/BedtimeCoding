@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Coding</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <canvas width="600" height="600" class="myCanva"></canvas>
+
+    <script>
+      let canvas = document.querySelector(".myCanva");
+      let context = canvas.getContext("2d");
+
+      context.fillStyle = "blue";
+      //   context.fillRect(100, 100, 400, 400);
+
+      //   context.beginPath();
+      //   context.rect(100, 100, 400, 400);
+      //   context.stroke();
+
+      //   context.beginPath();
+      //   context.arc(300, 300, 100, 0, Math.PI * 2);
+      //   context.stroke();
+      generate = () => {
+        context.lineWidth = 4;
+        // context.clearRect(0, 0, canvas.width, canvas.height);
+        context.beginPath();
+        context.fillStyle = "#ecf0f1";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        context.fill();
+        
+        const width = 60;
+        const height = 60;
+        const gap = 25;
+        let x, y;
+        for (let i = 0; i < 5; i++) {
+          for (let j = 0; j < 5; j++) {
+            context.lineWidth = Math.random() * 3 + 0.5;
+            x = 100 + (width + gap) * i;
+            y = 100 + (height + gap) * j;
+
+            context.beginPath();
+            context.rect(x, y, width, height);
+            context.stroke();
+
+            if (Math.random() > 0.8) {
+              context.lineWidth = Math.random() * 2 + 0.5;
+              context.beginPath();
+              context.fillStyle = "#e74c3c";
+              context.fillRect(x + 8, y + 8, width - 16, height - 16);
+              context.fill();
+              context.rect(x + 8, y + 8, width - 16, height - 16);
+              context.strokeStyle='#e74c3c';
+              context.stroke();
+            }
+          }
+        }
+      };
+      setInterval(generate, 500);
+    </script>
+  </body>
+</html>
