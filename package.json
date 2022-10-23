@@ -1,0 +1,23 @@
+{
+  "name": "bedtimecoding",
+  "version": "1.0.0",
+  "description": "I'll be uploading the projects I usually work on before bedtime 😎 😶‍🌫️ 😴",
+  "main": "sketch-03.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LukeGorgadze/BedtimeCoding.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LukeGorgadze/BedtimeCoding/issues"
+  },
+  "homepage": "https://github.com/LukeGorgadze/BedtimeCoding#readme",
+  "dependencies": {
+    "canvas-sketch": "^0.7.6"
+  }
+}
